@@ -7,16 +7,20 @@ This section of the lab focuses on monitoring and analyzing SSH (Secure Shell) t
 Key Metrics Tracked
 
 Total SSH Events: 1,200
+
 Successful Logins: 306
+
 Failed Logins: 305
+
 Invalid User Attempts: 286
+
 Brute Force Indicators: 303
 
 Technical Implementation (SPL Queries)
 
 Below are the Search Processing Language (SPL) commands used to generate the dashboard panels:
 
-Event Discovery & Initial Count
+1.Event Discovery & Initial Count
 
 To begin the investigation, I used a broad search to verify the total volume of SSH data available in the index.
 ```splunk
