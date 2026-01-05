@@ -2,26 +2,21 @@ SSH Login Analysis & Security Monitoring
 
 Project Overview
 
-This section of the lab focuses on monitoring and analyzing SSH (Secure Shell) traffic to identify patterns of legitimate access and potential malicious activity. Using Splunk, we ingested and parsed SSH logs to build a comprehensive security dashboard that tracks authentication health and detects brute-force threats.
-
+This section of the lab focuses on monitoring and analyzing SSH (Secure Shell) traffic to identify patterns of legitimate access and potential malicious activity. Using Splunk, SSH logs were ingested and parsed to build a security monitoring dashboard that tracks authentication activity and detects brute-force behavior.
 
 Key Metrics Tracked
 
 Total SSH Events: 1,200
-
 Successful Logins: 306
-
 Failed Logins: 305
-
 Invalid User Attempts: 286
-
-Brute Force Leads: 303
+Brute Force Indicators: 303
 
 Technical Implementation (SPL Queries)
 
 Below are the Search Processing Language (SPL) commands used to generate the dashboard panels:
 
-1. Event Discovery & Initial Count
+Event Discovery & Initial Count
 
 To begin the investigation, I used a broad search to verify the total volume of SSH data available in the index.
 ```splunk
