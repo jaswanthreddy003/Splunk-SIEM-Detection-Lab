@@ -24,7 +24,7 @@ Below are the Search Processing Language (SPL) commands used to generate the das
 
 To begin the investigation, I used a broad search to verify the total volume of SSH data available in the index.
 ```splunk
-index=ssh host=SSH 
+index=ssh host=ssh 
 | stats count AS "Total SSH Events"
 ```
 Result: Confirmed 1,200 total log entries.
