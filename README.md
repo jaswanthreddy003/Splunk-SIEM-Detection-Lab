@@ -1,5 +1,5 @@
 Included Projects
-1. SSH Log Analysis & Security Monitoring
+1.SSH Log Analysis & Security Monitoring
 
 This project analyzes SSH authentication logs to monitor access patterns and detect suspicious activity such as brute-force attempts and unauthorized login behavior.
 
@@ -17,7 +17,7 @@ Geographic visualization of attack sources
 
 The dashboard provides visibility into SSH authentication health and highlights common attack patterns seen in real SOC environments.
 
-2. Web Traffic Analysis & Security Monitoring
+2.Web Traffic Analysis & Security Monitoring
 
 This project focuses on analyzing Apache web server access logs to understand web traffic behavior and identify potential security issues.
 
