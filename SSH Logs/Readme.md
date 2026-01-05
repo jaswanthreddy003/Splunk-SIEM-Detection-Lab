@@ -6,6 +6,7 @@ This section of the lab focuses on monitoring and analyzing SSH (Secure Shell) t
 
 
 Key Metrics Tracked
+
 Total SSH Events: 1,200
 
 Successful Logins: 306
