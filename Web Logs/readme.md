@@ -32,7 +32,7 @@ Technical Implementation (SPL Queries)
 
 Below are the Search Processing Language (SPL) commands used to generate each dashboard panel.
 
-1. Total Web Traffic (Initial Event Discovery)
+1.Total Web Traffic (Initial Event Discovery)
 
 This query verifies that web logs are properly ingested and confirms the total volume of web traffic.
 ```splunk
@@ -41,7 +41,7 @@ index=web_traffic host=Web_Logs source="apache_logs.json"
 
 Result: Confirmed 2,000 total web request events.
 
-2. Successful Web Responses (HTTP 200)
+2.Successful Web Responses (HTTP 200)
 
 This query filters successful HTTP responses to establish a baseline of normal user activity.
 ```splunk
@@ -50,7 +50,7 @@ index=web_traffic host=Web_Logs source="apache_logs.json" status=200
 
 Result: Identified 1,168 successful responses.
 
-3. Client Error Analysis (HTTP 4xx)
+3.Client Error Analysis (HTTP 4xx)
 
 This query identifies client-side errors such as forbidden access, missing resources, or unauthorized requests.
 ```splunk
@@ -62,7 +62,7 @@ Result: Identified 376 client error events.
 
 Observation: Frequent access to restricted or invalid URIs indicates possible probing or misconfigured requests.
 
-4. Server Error Analysis (HTTP 5xx)
+4.Server Error Analysis (HTTP 5xx)
 
 This query tracks server-side errors that may indicate backend failures or service instability.
 ```splunk
@@ -74,7 +74,7 @@ Result: Identified 167 server error events.
 
 Observation: Intermittent server errors may indicate application stress or abnormal request patterns.
 
-5. Top Visited URIs
+5.Top Visited URIs
 
 This query identifies the most frequently accessed web resources.
 ```splunk
@@ -86,7 +86,7 @@ Result: Top visited URIs were visualized using a column chart.
 
 Observation: Some URIs contained unusual query parameters and external referrers, which may indicate malicious or automated access attempts.
 
-6. Top Users by IP Address
+6.Top Users by IP Address
 
 This query identifies the most active client IP addresses based on request volume.
 ```splunk
@@ -96,7 +96,7 @@ index=web_traffic host=Web_Logs source="apache_logs.json"
 
 Result: Multiple IP addresses showed higher request volumes, useful for identifying potential bots or scanners.
 
-7. Web Traffic by Client IP Addresses (Geographical Analysis)
+7.Web Traffic by Client IP Addresses (Geographical Analysis)
 
 This query maps client IP addresses to geographic locations to visualize where traffic originates.
 ```splunk
