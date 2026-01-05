@@ -1,3 +1,12 @@
+Security Log Analysis Projects (Splunk)
+
+Overview
+
+This repository contains hands-on security monitoring and log analysis projects built using Splunk Enterprise. The projects simulate real-world SOC workflows by ingesting, analyzing, and visualizing log data to identify normal behavior, anomalies, and potential security threats.
+
+Each project focuses on a different log source but follows a consistent investigation methodology:
+baseline establishment, anomaly detection, and security-focused interpretation.
+
 Included Projects
 
 1.SSH Log Analysis & Security Monitoring
