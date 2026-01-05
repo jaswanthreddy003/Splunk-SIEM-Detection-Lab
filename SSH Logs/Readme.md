@@ -18,14 +18,14 @@ Code snippet
 ```splunk
 index=ssh host=SSH 
 | stats count AS "Total SSH Events"
-
+```
 Result: Confirmed 1,200 total log entries.
 2. Authentication Success Tracking
 This query filters for successful login events to establish a baseline for authorized user behavior.
 Code snippet
 ```splunk
 index=ssh host=ssh event_type="Successful SSH Login"
-
+```
 Result: Identified 306 successful logins.
 
 3. Targeted Username Analysis (Failed Logins)
@@ -35,7 +35,7 @@ Code snippet
 ```splunk
 index=ssh host=ssh Event_Type="Failed SSH Login" 
 | top username limit=20
-
+```
 Observation: The "root" user was the primary target with 27 failed attempts, followed by common service accounts like "backup" and "alice".
 
 4. Brute Force Detection by Source IP
@@ -45,7 +45,7 @@ Code snippet
 ```splunk
 index=ssh host=ssh sourcetype=_json Event_Type="Multiple Failed Authentication Attempts" 
 | top limit=20 "id.orig_h"
-
+```
 Top Attacker: IP 83.195.24.226 was responsible for 4.29% of all multiple-failure events.
 
 5. Geographical Threat Mapping
@@ -58,3 +58,4 @@ index=ssh host=ssh sourcetype="_json" event_type="Multiple Failed Authentication
 | iplocation id.orig_h 
 | stats count by Country 
 | geom geo_countries featureIdField="Country"
+```
