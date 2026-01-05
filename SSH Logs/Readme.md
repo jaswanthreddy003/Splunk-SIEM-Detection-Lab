@@ -1,6 +1,9 @@
 SSH Login Analysis & Security Monitoring
+
 Project Overview
+
 This section of the lab focuses on monitoring and analyzing SSH (Secure Shell) traffic to identify patterns of legitimate access and potential malicious activity. Using Splunk, we ingested and parsed SSH logs to build a comprehensive security dashboard that tracks authentication health and detects brute-force threats.
+
 
 Key Metrics Tracked
 Total SSH Events: 1,200
