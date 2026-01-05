@@ -59,3 +59,4 @@ index=ssh host=ssh sourcetype="_json" event_type="Multiple Failed Authentication
 | stats count by Country 
 | geom geo_countries featureIdField="Country"
 ```
+Observation:Significant brute-force activity was visualized originating from North America and South America and china.
